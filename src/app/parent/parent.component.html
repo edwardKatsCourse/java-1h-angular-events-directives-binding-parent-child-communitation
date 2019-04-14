@@ -1,0 +1,8 @@
+<h1>Parent</h1>
+<br>
+<label for="message">Message</label>
+&nbsp;
+<input type="text" [(ngModel)]="parentMessage" id="message">
+
+<hr>
+<app-child [message]="parentMessage" (childEvent)="parentMessage = $event"></app-child>

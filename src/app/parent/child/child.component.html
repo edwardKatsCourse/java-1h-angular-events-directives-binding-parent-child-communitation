@@ -1,0 +1,9 @@
+<h2>Child</h2>
+<h3>{{messageFromParent}}</h3>
+<label for="childMessage">Childish message</label>
+<input
+  type="text"
+  id="childMessage"
+  [(ngModel)]="messageFromParent"/>
+
+<button (click)="updateParent()">Send back to parent</button>

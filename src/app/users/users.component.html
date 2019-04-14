@@ -1,0 +1,29 @@
+<div class="card card-body">
+  <app-user-input (childEvent)="updateUsers($event)"></app-user-input>
+  <div>
+    <label for="filter">Filter by licence</label>
+    <input name="filter" id="filter" class="custom-checkbox" type="checkbox" (change)="filterUsers()">
+  </div>
+  <table class="table table-hover table-striped">
+
+    <thead>
+    <tr>
+      <th>Username</th>
+      <th>Full Name</th>
+      <th>Age</th>
+      <th>Has Driving Licence</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let user of users">
+    <tr>
+      <!--STRING INTERPOLATION-->
+      <td>{{user.username}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.age}}</td>
+      <td>{{user.hasDrivingLicence}}</td>
+    </tr>
+
+    </tbody>
+  </table>
+
+</div>
